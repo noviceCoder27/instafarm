@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getProducts } from "../apis/product";
 import Product from "../components/Product";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 
 
@@ -26,7 +26,11 @@ const Products = () => {
     return (
         <Flex direction= "column">
             <Navbar />
-            {displayProducts}
+            <Box w= "full" h = "10px" bg = "lightgreen"></Box>
+            <Flex p = "2rem 4rem" bg = "whitesmoke" justifyContent = "content" flexWrap= "wrap" gap = "2rem">
+                {displayProducts}
+            </Flex>
+            
         </Flex>
     )
 }

@@ -2,9 +2,11 @@ import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, 
 import { useEffect, useState } from "react"
 import { getCartItems } from "../apis/cart";
 import Product from "./Product";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({isOpen,onClose}) => {
     const [cartItems,setCartItems] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchCartItems = async() => {
             const data = await getCartItems();
@@ -15,6 +17,10 @@ const Cart = ({isOpen,onClose}) => {
     const displayCartItems = cartItems.length ? cartItems?.map((item,index) => (
         <Product key = {index} item = {item} cart = {true}/>
     )): "Nothing to display"
+    const handleClick = () => {
+        navigate("/order");
+    }
+
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
@@ -28,7 +34,7 @@ const Cart = ({isOpen,onClose}) => {
                 <Button colorScheme='blue' mr={3} onClick={onClose}>
                 Close
                 </Button>
-                <Button variant='ghost'>Secondary Action</Button>
+                <Button variant='ghost' onClick = {handleClick}>Proceed to Order</Button>
             </ModalFooter>
             </ModalContent>
         </Modal>
