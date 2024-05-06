@@ -51,3 +51,26 @@ Follow these steps to run the project:
 
 
 That's it! The Instafarm project should now be running.
+
+
+# Output Screenshots
+
+Home page
+![Home Page](https://github.com/noviceCoder27/instafarm/blob/main/Screenshot-2024-05-06-213513.png)
+
+Products Page
+
+![Output Page](https://github.com/noviceCoder27/instafarm/blob/main/Screenshot-2024-05-06-213527.png)
+
+Cart Component
+
+![Cart](https://github.com/noviceCoder27/instafarm/blob/main/Screenshot-2024-05-06-213540.png)
+
+Order Page
+
+![Order Page](https://github.com/noviceCoder27/instafarm/blob/main/Screenshot-2024-05-06-213604.png)
+
+Login/Register Page
+
+![Auth Page](https://github.com/noviceCoder27/instafarm/blob/main/Screenshot-2024-05-06-213626.png)
+
