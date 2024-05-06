@@ -42,8 +42,7 @@ const Product = ({item,cart}) => {
                    : 
                    <Button ml = "1rem" onClick = {addItem} bgColor = "greenyellow" _hover={{bg: "green",color: "white"}}>Add To Cart</Button>}
                 </Flex>
-            </Box>
-            
+            </Box> 
         </Box>
     )
 }
